@@ -1,0 +1,13 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended", "schedule:earlyMondays", ":semanticCommitTypeAll(task)"],
+	"labels": ["dependencies"],
+	"dependencyDashboard": false,
+	"minimumReleaseAge": "3 days",
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch", "pin"],
+			"groupName": "all non-major dependencies"
+		}
+	]
+}

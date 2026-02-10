@@ -1,0 +1,26 @@
+'use client';
+
+import { Portal, Tooltip } from '@skeletonlabs/skeleton-react';
+import { createFileRoute } from '@tanstack/react-router';
+
+export const Route = createFileRoute('/components/tooltip/')({
+	component: Page,
+});
+
+function Page() {
+	return (
+		<Tooltip>
+			<Tooltip.Trigger>Trigger</Tooltip.Trigger>
+			<Portal>
+				<Tooltip.Positioner>
+					<Tooltip.Content>
+						Content
+						<Tooltip.Arrow className="[--arrow-size:--spacing(2)] [--arrow-background:var(--color-surface-100-900)]">
+							<Tooltip.ArrowTip />
+						</Tooltip.Arrow>
+					</Tooltip.Content>
+				</Tooltip.Positioner>
+			</Portal>
+		</Tooltip>
+	);
+}

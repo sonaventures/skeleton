@@ -1,0 +1,27 @@
+# build output
+out/
+dist/
+.vercel/
+
+# generated
+.astro/
+.svelte-kit/
+.tanstack/
+routeTree.gen.ts
+**/pagefind
+
+# dependencies
+node_modules/
+
+# macOS-specific files
+.DS_Store
+
+# build artifacts
+**/vite.config.js.timestamp-*
+**/vite.config.ts.timestamp-*
+
+# misc
+.idea/
+.temp/
+*.tgz
+.vscode/launch.json

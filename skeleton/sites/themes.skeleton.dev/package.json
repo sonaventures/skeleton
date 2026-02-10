@@ -1,0 +1,32 @@
+{
+	"name": "@skeletonlabs/themes.skeleton.dev",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"postinstall": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@lucide/svelte": "catalog:",
+		"@skeletonlabs/skeleton": "workspace:*",
+		"@skeletonlabs/skeleton-common": "workspace:*",
+		"@skeletonlabs/skeleton-svelte": "workspace:*",
+		"@sveltejs/adapter-vercel": "catalog:",
+		"@sveltejs/kit": "catalog:",
+		"@sveltejs/vite-plugin-svelte": "catalog:",
+		"@tailwindcss/forms": "catalog:",
+		"@tailwindcss/vite": "catalog:",
+		"@types/chroma-js": "catalog:",
+		"chroma-js": "catalog:",
+		"shiki": "catalog:",
+		"svelte": "catalog:",
+		"svelte-check": "catalog:",
+		"tailwindcss": "catalog:",
+		"typescript": "catalog:",
+		"vite": "catalog:",
+		"vite-plugin-transform-lucide-imports": "catalog:"
+	},
+	"type": "module"
+}

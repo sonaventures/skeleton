@@ -1,0 +1,43 @@
+{
+	"name": "@skeletonlabs/monorepo",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"docs": "pnpm --filter @skeletonlabs/skeleton.dev",
+		"themes": "pnpm --filter @skeletonlabs/themes.skeleton.dev",
+		"svelte": "pnpm --filter @skeletonlabs/playground-skeleton-svelte",
+		"react": "pnpm --filter @skeletonlabs/playground-skeleton-react",
+		"test": "vitest run",
+		"check": "pnpm --recursive --aggregate-output --reporter=append-only --parallel check",
+		"format": "prettier . --cache --write --ignore-unknown --experimental-cli",
+		"format:check": "prettier . --cache --check --ignore-unknown --experimental-cli",
+		"lint": "oxlint --type-aware --fix",
+		"lint:check": "oxlint --type-aware",
+		"changeset:publish": "changeset publish",
+		"changeset:version": "changeset version && pnpm format"
+	},
+	"devDependencies": {
+		"@changesets/cli": "catalog:",
+		"@playwright/test": "catalog:",
+		"@prettier/plugin-oxc": "catalog:",
+		"@svitejs/changesets-changelog-github-compact": "catalog:",
+		"@trivago/prettier-plugin-sort-imports": "catalog:",
+		"oxlint": "catalog:",
+		"oxlint-tsgolint": "catalog:",
+		"prettier": "catalog:",
+		"prettier-plugin-astro": "catalog:",
+		"prettier-plugin-svelte": "catalog:",
+		"vite": "catalog:",
+		"vitest": "catalog:"
+	},
+	"pnpm": {
+		"overrides": {
+			"vite": "catalog:"
+		}
+	},
+	"engines": {
+		"node": "24.x",
+		"pnpm": "10.28.0"
+	},
+	"packageManager": "pnpm@10.28.0"
+}

@@ -1,0 +1,78 @@
+---
+title: Scroll Containers
+description: Create scrolling containers using the scroll snap features from Tailwind.
+tags: ['blocks', 'images']
+---
+
+import CarouselReact from '@/components/examples/guides/cookbook/scroll-containers/react/carousel';
+import CarouselReactRaw from '@/components/examples/guides/cookbook/scroll-containers/react/carousel.tsx?raw';
+import DefaultReact from '@/components/examples/guides/cookbook/scroll-containers/react/default';
+import DefaultReactRaw from '@/components/examples/guides/cookbook/scroll-containers/react/default.tsx?raw';
+import MultiColumnReact from '@/components/examples/guides/cookbook/scroll-containers/react/multi-column';
+import MultiColumnReactRaw from '@/components/examples/guides/cookbook/scroll-containers/react/multi-column.tsx?raw';
+import CarouselSvelte from '@/components/examples/guides/cookbook/scroll-containers/svelte/carousel.svelte';
+import CarouselSvelteRaw from '@/components/examples/guides/cookbook/scroll-containers/svelte/carousel.svelte?raw';
+import DefaultSvelte from '@/components/examples/guides/cookbook/scroll-containers/svelte/default.svelte';
+import DefaultSvelteRaw from '@/components/examples/guides/cookbook/scroll-containers/svelte/default.svelte?raw';
+import MultiColumnSvelte from '@/components/examples/guides/cookbook/scroll-containers/svelte/multi-column.svelte';
+import MultiColumnSvelteRaw from '@/components/examples/guides/cookbook/scroll-containers/svelte/multi-column.svelte?raw';
+
+## Scroll Snap
+
+Implements Tailwind's [Scroll Snap Alignment](https://tailwindcss.com/docs/scroll-snap-align) utility classes.
+
+<Framework id="react">
+	<Preview framework="react" files={{ 'app.tsx': DefaultReactRaw }} client:visible>
+		<DefaultReact client:visible />
+	</Preview>
+</Framework>
+<Framework id="svelte">
+	<Preview framework="svelte" files={{ 'app.svelte': DefaultSvelteRaw }} client:visible>
+		<DefaultSvelte client:visible />
+	</Preview>
+</Framework>
+
+## Carousels
+
+Using Scroll Containers, we can create a fully functional carousel, complete with thumbnail selection.
+
+<Framework id="react">
+	<Preview framework="react" files={{ 'app.tsx': CarouselReactRaw }} client:visible>
+		<CarouselReact client:visible />
+	</Preview>
+</Framework>
+<Framework id="svelte">
+	<Preview framework="svelte" files={{ 'app.svelte': CarouselSvelteRaw }} client:visible>
+		<CarouselSvelte client:visible />
+	</Preview>
+</Framework>
+
+## Multi-Column
+
+Using Scroll Containers, we can scroll sets of items.
+
+<Framework id="react">
+	<Preview framework="react" files={{ 'app.tsx': MultiColumnReactRaw }} client:visible>
+		<MultiColumnReact client:visible />
+	</Preview>
+</Framework>
+<Framework id="svelte">
+	<Preview framework="svelte" files={{ 'app.svelte': MultiColumnSvelteRaw }} client:visible>
+		<MultiColumnSvelte client:visible />
+	</Preview>
+</Framework>
+
+> Images courtesy of [The Movie Database](https://www.themoviedb.org/)
+
+## API Reference
+
+Learn more about Tailwind's utility classes for scroll behavior and scroll snap.
+
+| Feature                                                             | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [scroll-behavior](https://tailwindcss.com/docs/scroll-behavior)     | Controls the scroll behavior of an element.                         |
+| [scroll-margin](https://tailwindcss.com/docs/scroll-margin)         | Controls the scroll offset around items in a snap container.        |
+| [scroll-padding](https://tailwindcss.com/docs/scroll-padding)       | Controls an element's scroll offset within a snap container.        |
+| [scroll-snap-align](https://tailwindcss.com/docs/scroll-snap-align) | Controls the scroll snap alignment of an element.                   |
+| [scroll-snap-stop](https://tailwindcss.com/docs/scroll-snap-stop)   | Controls whether you can skip past possible snap positions.         |
+| [scroll-snap-type](https://tailwindcss.com/docs/scroll-snap-type)   | Controls how strictly snap points are enforced in a snap container. |

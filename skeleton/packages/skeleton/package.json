@@ -1,0 +1,44 @@
+{
+	"name": "@skeletonlabs/skeleton",
+	"version": "4.12.0",
+	"description": "The TailwindCSS package for Skeleton.",
+	"author": "endigo9740 <chris@skeletonlabs.dev>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/skeletonlabs/skeleton.git",
+		"directory": "packages/skeleton"
+	},
+	"scripts": {
+		"prepack": "clean-package",
+		"postpack": "clean-package restore"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.css",
+			"style": "./src/index.css"
+		},
+		"./themes/*": {
+			"import": "./src/themes/*.css",
+			"style": "./src/themes/*.css"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"src"
+	],
+	"peerDependencies": {
+		"tailwindcss": "^4.0.0"
+	},
+	"devDependencies": {
+		"clean-package": "catalog:"
+	},
+	"license": "MIT",
+	"type": "module",
+	"clean-package": {
+		"remove": [
+			"scripts",
+			"devDependencies",
+			"clean-package"
+		]
+	}
+}
